@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+        
+    <!-- Load JavaScript Libraries -->
+    <script src="../../js/jquery/jquery.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+    <script src="../../js/jquery/jquery.widget.min.js"></script>
+    <script src="../../js/jquery/jquery.mousewheel.js"></script>
+    <script src="../../js/jquery/jquery.dataTables.js"></script>
+
+
+<title>phoenix grid</title>
+</head>
+<body class="metro">
+    
+    http://www.datatables.net/
+
+    <div class="container">
+        <h1>
+            <a href="/"><i class="icon-arrow-left-3 fg-darker smaller"></i></a>
+            DataTables<small class="on-right">plugin</small>
+        </h1>
+
+        <p class="padding20 bg-grayLighter">
+            DataTables is a plug-in for the jQuery Javascript library written by <a href="http://www.sprymedia.co.uk/">SpryMedia</a>. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.
+        </p>
+
+        <p class="description">
+            Metro UI CSS provides style support for DataTables.
+        </p>
+
+        <button id="teste">Teste</button>
+
+        <div class="example">
+            <table class="table striped hovered dataTable" id="tabela" >
+                <thead>
+                <tr>
+                    <th class="text-left">Engine</th>
+                    <th class="text-left">Browser</th>
+                    <th class="text-left">Platform</th>
+                    <th class="text-left">Version</th>
+                    <th class="text-left">CSS grade</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <th class="text-left">Engine</th>
+                    <th class="text-left">Browser</th>
+                    <th class="text-left">Platform</th>
+                    <th class="text-left">Version</th>
+                    <th class="text-left">CSS grade</th>
+                </tr>
+                </tfoot>
+            </table>
+
+            <script>
+       
+                $(function(){
+                    $('#tabela').dataTable( {
+                        "bProcessing": true,
+                        "sAjaxSource": "data/dataTables-objects.json",
+                        "aoColumns": [
+                            { "mData": "engine" },
+                            { "mData": "browser" },
+                            { "mData": "platform" },
+                            { "mData": "version" },
+                            { "mData": "grade" }
+                        ]
+                    } );
+                });
+
+                $(document).ready(function() {
+
+                    $("#teste").click(function(event) {
+                  
+
+                    var t = $('#tabela').DataTable();  
+
+                    t.row.add( {
+                              
+                              "browser": "Internet Explorer 5.0",
+                              "platform": "Win 95+",
+                              "version": "5",
+                              "grade": "C",
+                              "engine": "Trident"
+                            }
+                     ).draw();
+                                        
+                    console.log("clicou!");
+
+                    });
+
+                } );
+
+                /*               
+                -- INSERT na tabela dbo.exemplo para testes.
+
+                DECLARE @I INT;
+                DECLARE @CPF BIGINT;
+                DECLARE @CPF_VARCHAR VARCHAR(11);
+                DECLARE @VALOR DECIMAL(19,2);
+
+                SET @I = 1;
+
+
+                WHILE (@I <= 500)
+                BEGIN
+
+                    SELECT @CPF = ROUND(((99999999999 - 11111111111 -1) * RAND() + 11111111111), 0);
+                    SELECT @CPF_VARCHAR = CONVERT(varchar(11), @CPF);
+                    SELECT @VALOR = ((10000 - 100 -1) * RAND() + 10000);
+
+                    PRINT(@I);
+                    PRINT(@CPF_VARCHAR);
+                    PRINT(@VALOR);
+
+
+                    INSERT INTO 
+                      dbo.exemplo
+                    (
+                      --exe_id,
+                      exe_nome,
+                      exe_cpf,
+                      exe_data,
+                      exe_valor,
+                      exe_checkbox,
+                      exe_radio_button,
+                      exe_input
+                    ) 
+                    VALUES (
+                      --:exe_id,
+                      'Nome '+CAST(@I AS VARCHAR(100)),
+                      @CPF_VARCHAR,
+                      GETDATE(),
+                      @VALOR,
+                      0,
+                      'A',
+                      'Teste'
+                    );
+
+                    SET @I = @I+1;
+
+                END
+                 */
+
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<div id="phoenixContainer">
+
+	<px-top-menu/></px-top-menu>  
+
+	<div 
+		id         ="workDiv" 
+		ng-include ="template.url"/>
+
+	<div 
+		id            ="actionDiv" 
+		ng-include    ="templates[0].url" 
+		ng-model      ="view" 
+		ng-controller ="homeCtrl"/>
+
+</div>
