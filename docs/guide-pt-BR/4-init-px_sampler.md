@@ -17,11 +17,9 @@ Server | dbsq0008.whservidor.com | Port: 1433
 User name | phoenixbox1
 Password | *Solicitar senha enviando um email para weslei.rfreitas@gmail.com, com o assunto* **[PHOENIX] DSN**
 
-Com a conexão definida, vá endereço http://localhost:8500/px_sampler e realize o login:
+Com a conexão definida, vá endereço [http://localhost:8500/px_sampler](http://localhost:8500/px_sampler) e realize o login:
 
 Campo | Valor
 ------------ | -------------
 Usuário | phoenix
 Senha | atopng
-
-## Fluxo de Trabalho
