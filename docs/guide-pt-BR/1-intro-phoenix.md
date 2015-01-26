@@ -24,4 +24,4 @@ Atualmente a Phoenix requer o Adobe ColdFusion (não é necessária experiência
 
 Desenvolver a Phoenix e projetos baseadas nela requer conhecimentos básicos sobre programação orientada a objetos (OOP), HTML, Java Script, CSS, e AngularJS. 
 
-Phoenix tem como uma de suas propostas permitir por meio de documentações, tutoriais e exemplos que desenvolvedores iniciantes possam desenvolver seus próprios projetos baseadas na Phoenix mesmo que não tenham experiência com as tecnologias utilizadas.
+Phoenix tem como uma de suas propostas permitir por meio de documentações, tutoriais e exemplos que desenvolvedores iniciantes possam desenvolver seus próprios projetos baseadas na Phoenix.
