@@ -21,7 +21,7 @@ Instale o gerenciador de pacotes seguindo as instruções no endereço https://s
 	
 ## Instalando Pacotes
 
-Para instalar pacotes no sublime vá tem **Tools** –> **Command Palette** ou use as teclas de atalho *Ctrl+Shift+P* (Windows). Procure comando **Package Control: Install Package**. Repare que é possível digitar parte do comando para encontra-lo.
+Para instalar pacotes no sublime vá tem **Tools** –> **Command Palette** ou use as teclas de atalho *Ctrl+Shift+P* (Windows). Procure comando **Package Control: Install Package**, repare que é possível digitar apenas uma parte do comando.
 
 ![sublime_install_package](images/sublime_install_package.png)
 
